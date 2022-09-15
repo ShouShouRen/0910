@@ -1,0 +1,173 @@
+$primary: #ffb1e8;
+$secondary: #fafafa;
+@import './functions';
+@import './variables';
+
+
+$custom-theme-colors: (
+    'deeppinks': #ff7dd8,
+    'pinks': #fff5fc,
+    'gold': #ffd374,
+    'blues': #b7e8fc,
+    'ddd': #ddd,
+    '2d2d2d':#2d2d2d
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+
+
+@import './bootstrap.scss';
+
+@font-face {
+    font-family: 'openhuninn';
+    src: url('/font/jf-openhuninn-1.1.ttf');
+}
+
+
+.bg-op {
+    background-color: rgba(11, 11, 11, 0.8);
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'openhuninn';
+}
+
+
+p {
+    letter-spacing: 2px;
+    font-size: 17px;
+    line-height: calc(17px * 1.8);
+    color: #747474;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 70px;
+    height: 100vh;
+}
+
+@media (max-width: 1400px) {
+
+    section,
+    .row {
+        height: 100% !important;
+    }
+}
+
+.navbar {
+    transition: all .4s ease;
+    background-image: url('../images/navbar.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 992px) {
+        background-image: none;
+        background-color: #2d2d2d;
+    }
+    .nav-item {
+        font-size: 18px;
+        padding-left: 2.5em;
+        text-align: center;
+
+        @media (max-width: 576px) {
+            padding: 0;
+        }
+    }
+
+    .nav-link {
+        position: relative;
+        font-weight: bold;
+        color: #fff;
+
+        &:hover {
+            color: #eee;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 4px;
+            transform: translate(-50%, 0);
+            background-color: #ffb1e8;
+            transition: all .4s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+.carousel-caption.a {
+    inset: 0;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    border: 8px solid #fff;
+    width: 40%;
+    height: 40%;
+}
+
+.carousel-caption.b {
+    inset: 0;
+    top: 20%;
+    left: 10%;
+    width: 40%;
+    height: 100%;
+    text-align: left;
+}
+
+.carousel-caption.c {
+    inset: 0;
+    top: 20%;
+    left: 50%;
+    width: 45%;
+    height: 100%;
+    text-align: left;
+}
+
+#about {
+    background-image: url('../images/dot.jpg');
+    background-size: contain;
+    background-position: center;
+}
+
+#news {
+    background-image: url('../images/new.png');
+    background-size: cover;
+    background-position: center;
+}
+#sweet{
+    .mycard{
+        background-color: #fff;
+    }
+    .myshadow{
+        box-shadow: 10px 10px #ff7dd880;
+    }
+}

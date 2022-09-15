@@ -127,7 +127,7 @@
                         <img src="./images/news-a.jpg" class="w-100 h-[280px] object-cover" alt="">
                         <p class="pt-3 text-justify">老麵芝麻麵包新品上市，手工搓揉麵團傭有大師級的口感，入口綿密加上粒粒芝麻，讓口感再次升級使香氣更加十足不只吃的到麵香。</p>
                         <div class="text-end pt-3">
-                            <button class="btn btn-primary">了解更多</button>
+                            <a href="#sweet" class="btn btn-primary">了解更多</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                         <img src="./images/news-b.jpg" class="w-100 h-[280px] object-cover" alt="">
                         <p class="pt-3 text-justify">現在訂購全館享有八折優惠，再送一張免運卷要買要快，錯過不在有機會。</p>
                         <div class="text-end pt-5">
-                            <button class="btn btn-primary">了解更多</button>
+                            <a href="#sweet" class="btn btn-primary">了解更多</a>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                         <img src="./images/news-c.jpg" class="w-100 h-[280px] object-cover" alt="">
                         <p class="pt-3 text-justify">新品上市囉來本實體店購買冰品並與「0428有點甜」打卡，單品可折抵十元限時優惠。</p>
                         <div class="text-end pt-5">
-                            <button class="btn btn-primary">了解更多</button>
+                            <a href="#sweet" class="btn btn-primary">了解更多</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                             </div>
                             <div class="flex justify-content-between align-items-center pt-5">
                                 <h4 class="text-center text-[20px]">{{product.title}}</h4>
-                                <button class="btn btn-blues">加入購物車</button>
+                                <button class="btn btn-blues"  data-bs-toggle="modal" data-bs-target="#shop">加入購物車</button>
                             </div>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                             </div>
                             <div class="flex justify-content-between align-items-center pt-5">
                                 <h4 class="text-center text-[20px]">{{product.title}}</h4>
-                                <button class="btn btn-blues">加入購物車</button>
+                                <button class="btn btn-blues"  data-bs-toggle="modal" data-bs-target="#shop" @click="sub()">加入購物車</button>
                             </div>
                         </div>
                     </div>
@@ -198,6 +198,38 @@
             </div>
         </div>
     </section>
+    <!-- Modal -->
+    <div class="modal fade" id="shop" tabindex="-1" aria-labelledby="shopLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="shopLabel">購物車</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="col">
+                <div class="flex justify-content-evenly">
+                    <p>品名</p>
+                    <p>數量</p>
+                    <p>價格</p>
+                </div>
+                <div class="flex justify-content-evenly">
+                    <p>品名</p>
+                    <p>{{sub[idx]}}</p>
+                    <p>價格</p>
+                </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 <script src="./js/bootstrap.js"></script>
 <script src="./js/vue-global.js"></script>

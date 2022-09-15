@@ -20,8 +20,7 @@ Vue.createApp({
                     amountShow: 0,
                 },
             ],
-            products_2: [
-                {
+            products_2: [{
                     title: '芝麻麵包',
                     img: '../images/product-d.jpg',
                     price: 70,
@@ -54,7 +53,10 @@ Vue.createApp({
     },
     computed: {
         sub() {
-            return this.products.map(data => data.price * data.amountShow)
-        }
+            return this.products_1.map(data => data.price * data.amountShow)
+        },
+        total() {
+            return this.sub.reduce((a, b) => a + b)
+        },
     }
 }).mount("#app")

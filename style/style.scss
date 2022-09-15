@@ -170,4 +170,16 @@ section {
     .myshadow{
         box-shadow: 10px 10px #ff7dd880;
     }
+    .ribbon{
+        width: 75%;
+        background-color: #ff60af8e;
+        z-index: 1;
+        transform: rotate(35deg);
+        right: -25%;
+        top: 5%;
+        text-align: center;
+        color: #fff;
+        padding: 5px;
+        
+    }
 }

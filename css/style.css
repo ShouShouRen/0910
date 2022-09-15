@@ -11588,4 +11588,15 @@ section {
 }
 #sweet .myshadow {
   box-shadow: 10px 10px rgba(255, 125, 216, 0.5019607843);
+}
+#sweet .ribbon {
+  width: 75%;
+  background-color: rgba(255, 96, 175, 0.5568627451);
+  z-index: 1;
+  transform: rotate(35deg);
+  right: -25%;
+  top: 5%;
+  text-align: center;
+  color: #fff;
+  padding: 5px;
 }/*# sourceMappingURL=style.css.map */

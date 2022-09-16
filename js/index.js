@@ -1,62 +1,38 @@
 Vue.createApp({
     data() {
         return {
-            products_1: [{
-                    title: '草莓蛋糕',
-                    img: '../images/product-a.jpg',
-                    price: 380,
-                    amountShow: 0,
-                },
-                {
-                    title: '草莓布朗尼',
-                    img: '../images/product-b.jpg',
-                    price: 60,
-                    amountShow: 0,
-                },
-                {
-                    title: '巧克力甜甜圈',
-                    img: '../images/product-c.jpg',
-                    price: 40,
-                    amountShow: 0,
-                },
-            ],
-            products_2: [{
-                    title: '芝麻麵包',
-                    img: '../images/product-d.jpg',
-                    price: 70,
-                    amountShow: 0,
-                },
-                {
-                    title: '堅果吐司',
-                    img: '../images/product-e.jpg',
-                    price: 150,
-                    amountShow: 0,
-                },
-                {
-                    title: '手做麵包',
-                    img: '../images/product-f.jpg',
-                    price: 50,
-                    amountShow: 0,
-                },
-            ]
+            products: [],
+            carts: []
         }
     },
     methods: {
-        minus(product) {
-            product.amountShow--
-            product.amountShow = (product.amountShow < 1) ? 0 : product.amountShow
+        addToCart(id) {
+            let item = this.products.find(data => data.id === id);
+            console.log(item);
+            this.carts.push(item);
         },
-        plus(product) {
-            product.amountShow++
-            product.amountShow = (product.amountShow < 1) ? 0 : product.amountShow
+        clearCart() {
+            if (confirm('確認清空？')) {
+                this.carts.length = 0;
+            }
         },
+        removeCart(idx) {
+            if (confirm('確認移除？')) {
+                this.carts.splice(idx, 1);
+            }
+        }
     },
     computed: {
-        sub() {
-            return this.products_1.map(data => data.price * data.amountShow)
-        },
         total() {
-            return this.sub.reduce((a, b) => a + b)
-        },
-    }
+            if (this.carts.length > 0) {
+                return this.carts.map(data => data.price).reduce((a, b) => a + b);
+            }
+        }
+    },
+    created() {
+        let url = './js/products.json';
+        fetch(url).then(res => res.json()).then(data => {
+            this.products = data;
+        })
+    },
 }).mount("#app")

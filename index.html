@@ -38,7 +38,8 @@
                         <a class="nav-link" href="#contact">聯絡我們</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#shop">
+                        <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight" href="#shop">
                             <i class="fa-solid fa-cart-shopping">購物車</i>
                         </a>
                     </li>
@@ -156,34 +157,19 @@
         <div class="container">
             <h2 class="text-[40px] fw-bold text-center p-2">有點甜</h2>
             <div class="row pt-3">
-                <div class="col-lg-4 p-3" v-for="product of products_1">
+                <div class="col-lg-4 p-3" v-for="product,idx in products">
                     <div class="mycard relative overflow-hidden">
                         <div class="ribbon position-absolute">特價中</div>
                         <div class="p-3">
                             <div class="relative">
                                 <div class="mask"></div>
-                                <img :src="product.img" class="w-100 h-[300px] object-cover" alt="">
+                                <img :src="product.image" class="w-100 h-[300px] object-cover" alt="">
                             </div>
                             <div class="flex justify-content-between align-items-center pt-5">
                                 <h4 class="text-center text-[20px]">{{product.title}}</h4>
-                                <button class="btn btn-blues"  data-bs-toggle="modal" data-bs-target="#shop">加入購物車</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-3">
-                <div class="col-lg-4 p-3" v-for="product of products_2">
-                    <div class="mycard relative overflow-hidden">
-                        <div class="ribbon position-absolute">特價中</div>
-                        <div class="p-3">
-                            <div class="relative">
-                                <div class="mask"></div>
-                                <img :src="product.img" class="w-100 h-[300px] object-cover" alt="">
-                            </div>
-                            <div class="flex justify-content-between align-items-center pt-5">
-                                <h4 class="text-center text-[20px]">{{product.title}}</h4>
-                                <button class="btn btn-blues"  data-bs-toggle="modal" data-bs-target="#shop" @click="sub()">加入購物車</button>
+                                <button class="btn btn-blues" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                    @click="addToCart(product.id)">加入購物車</button>
                             </div>
                         </div>
                     </div>
@@ -198,37 +184,27 @@
             </div>
         </div>
     </section>
-    <!-- Modal -->
-    <div class="modal fade" id="shop" tabindex="-1" aria-labelledby="shopLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="shopLabel">購物車</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-          </div>
-          <div class="modal-body">
-            <div class="col">
-                <div class="flex justify-content-evenly">
-                    <p>品名</p>
-                    <p>數量</p>
-                    <p>價格</p>
-                </div>
-                <div class="flex justify-content-evenly">
-                    <p>品名</p>
-                    <p>{{sub[idx]}}</p>
-                    <p>價格</p>
-                </div>
-
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
         </div>
-      </div>
+        <div class="offcanvas-body">
+            <a href="#" @click="clearCart()" v-show="carts.length > 0">全部清空</a>
+            <div v-for="cart,idx in carts" :key="cart.id">
+                <div class="d-flex justify-content-between">
+                    <h5>{{cart.title}}</h5>
+                    <div>
+                        {{cart.price}}
+                    </div>
+                    <a href="#" @click="removeCart(idx)">刪除</a>
+                </div>
+            </div>
+            <hr>
+            <div>{{total}}</div>
+        </div>
     </div>
 </body>
 <script src="./js/bootstrap.js"></script>

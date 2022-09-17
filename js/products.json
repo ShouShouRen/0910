@@ -2,37 +2,37 @@
     {
         "id": 1,
         "title": "草莓蛋糕",
-        "image": "../images/product-a.jpg",
+        "image": "./images/product-a.jpg",
         "price": 380
     },
     {
         "id": 2,
         "title": "草莓布朗尼",
-        "image": "../images/product-b.jpg",
+        "image": "./images/product-b.jpg",
         "price": 60
     },
     {
         "id": 3,
         "title": "巧克力甜甜圈",
-        "image": "../images/product-c.jpg",
+        "image": "./images/product-c.jpg",
         "price": 40
     },
     {
         "id": 4,
         "title": "芝麻麵包",
-        "image": "../images/product-d.jpg",
+        "image": "./images/product-d.jpg",
         "price": 70
     },
     {
         "id": 5,
         "title": "堅果吐司",
-        "image": "../images/product-e.jpg",
+        "image": "./images/product-e.jpg",
         "price": 150
     },
     {
         "id": 6,
         "title": "手做麵包",
-        "image": "../images/product-f.jpg",
+        "image": "./images/product-f.jpg",
         "price": 50
     }
 ]

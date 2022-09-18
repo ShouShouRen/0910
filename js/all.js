@@ -15,6 +15,6 @@ $(document).ready(function () {
         }, 500);
     });
     $('#sub').click(function () {
-        $('#val').val('');
+        location.reload();
     })
 });

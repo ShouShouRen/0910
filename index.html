@@ -33,7 +33,7 @@
                             <a class="nav-link" href="#news">最新消息</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sweet">有點甜</a>
+                            <a class="nav-link" href="#shop">有點甜</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">聯絡我們</a>
@@ -65,7 +65,7 @@
                     <img src="./images/S2.jpg " class="d-block w-100  h-[100vh] object-cover" alt="...">
                     <div class="carousel-caption b d-none d-md-block">
                         <h3 class="text-[120px] p-2 text-gold">經典手作</h3>
-                        <p class="text-[30px] p-2">美味麵包限時八折中，手刀下單免運費再送折價卷!</p>
+                        <p class="text-[30px] p-2 text-white">美味麵包限時八折中，手刀下單免運費再送折價卷!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -129,7 +129,7 @@
                             <img src="./images/news-a.jpg" class="w-100 h-[280px] object-cover" alt="">
                             <p class="pt-3 text-justify">老麵芝麻麵包新品上市，手工搓揉麵團傭有大師級的口感，入口綿密加上粒粒芝麻，讓口感再次升級使香氣更加十足不只吃的到麵香。</p>
                             <div class="text-end pt-3">
-                                <a href="#sweet" class="btn btn-primary">了解更多</a>
+                                <a href="#shop" class="btn btn-primary">了解更多</a>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             <img src="./images/news-b.jpg" class="w-100 h-[280px] object-cover" alt="">
                             <p class="pt-3 text-justify">現在訂購全館享有八折優惠，再送一張免運卷要買要快，錯過不在有機會。</p>
                             <div class="text-end pt-5">
-                                <a href="#sweet" class="btn btn-primary">了解更多</a>
+                                <a href="#shop" class="btn btn-primary">了解更多</a>
                             </div>
                         </div>
                     </div>
@@ -147,14 +147,14 @@
                             <img src="./images/news-c.jpg" class="w-100 h-[280px] object-cover" alt="">
                             <p class="pt-3 text-justify">新品上市囉來本實體店購買冰品並與「0428有點甜」打卡，單品可折抵十元限時優惠。</p>
                             <div class="text-end pt-5">
-                                <a href="#sweet" class="btn btn-primary">了解更多</a>
+                                <a href="#shop" class="btn btn-primary">了解更多</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="sweet" class="bg-gray h-100 pb-[70px]">
+        <section id="shop" class="bg-gray h-100 pb-[70px]">
             <div class="container">
                 <h2 class="text-[40px] fw-bold text-center p-2">有點甜</h2>
                 <div class="row pt-3">
@@ -168,6 +168,7 @@
                                 </div>
                                 <div class="flex justify-content-between align-items-center pt-5">
                                     <h4 class="text-center text-[20px]">{{product.title}}</h4>
+                                    <h5>${{product.price}}</h5>
                                     <button class="btn btn-blues" data-bs-toggle="offcanvas"
                                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
                                         @click="addToCart(product.id)">加入購物車</button>

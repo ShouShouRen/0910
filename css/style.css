@@ -11533,7 +11533,7 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "openhuninn";
-  src: url("/font/jf-openhuninn-1.1.ttf");
+  src: url("../font/jf-openhuninn-1.1.ttf");
 }
 .bg-op {
   background-color: rgba(11, 11, 11, 0.8);
@@ -11669,13 +11669,13 @@ section {
   background-position: center;
 }
 
-#sweet .mycard {
+#shop .mycard {
   background-color: #fff;
 }
-#sweet .myshadow {
+#shop .myshadow {
   box-shadow: 10px 10px rgba(255, 125, 216, 0.5019607843);
 }
-#sweet .ribbon {
+#shop .ribbon {
   width: 75%;
   background-color: rgba(255, 96, 175, 0.5568627451);
   z-index: 1;

@@ -265,6 +265,9 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
+            <div v-show="carts.length <= 0">
+                <h3 class="h3 p-3">目前無商品</h3>
+            </div>
             <div class="offcanvas-body" v-show="carts.length > 0">
                 <div class="d-flex justify-content-between p-3 text-center">
                     <p>品名</p>

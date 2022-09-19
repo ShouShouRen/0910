@@ -209,7 +209,7 @@
                         <div class="my-5 p-4 bg-rose-200 relative lg:left-[-100px] rounded  cursor-pointer"
                             id="clickchange" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
                             type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                            <h2 class="sm:text-[26px] text-2d2d2d text-center">用料實在又安心，絕不添加任何防腐劑。</h2>
+                            <h2 class="sm:text-[26px] text-2d2d2d text-center">為了品質，我們願意多花點時間。</h2>
                         </div>
                         <div class="my-5 p-4 bg-rose-200 relative rounded  cursor-pointer" id="clickchange"
                             id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
@@ -225,24 +225,30 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="h-[80vh]">
+        <section id="contact" class="py-[80px] h-[80vh]">
             <h2 class="text-[40px] fw-bold text-center p-2">聯絡我們</h2>
             <div class="container">
                 <div class="row pt-3 justify-content-center align-items-center">
-                    <div class="col-8 h-[50vh] bg-op rounded-3">
-                        <div class="p-5">
+                    <div class="col-8 h-[50vh]  rounded-3">
+                        <div class="p-2">
                             <form>
-                                <div class="row">
-                                    <div class="col-md-6 col-12 p-3 text-white">
-                                        <label for="name" class="text-[20px] py-3">姓名:</label>
-                                        <input type="text" id="name" class="form-control">
-                                        <label for="name" class="text-[20px] py-3">電話:</label>
-                                        <input type="text" id="name" class="form-control">
-                                        <label for="name" class="text-[20px] py-3">姓名:</label>
-                                        <input type="text" id="name" class="form-control">
-                                    </div>
-                                    <div class="col-md-6 col-12 p-3">
-                                        <textarea class="form-control" style="resize:0; width: 100%; height: 25vh; "></textarea>
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <div class="p-4 bg-op">
+                                            <label for="name" class="text-[20px] py-3">姓名:</label>
+                                            <input type="text" id="name" class="form-control" placeholder="請輸入姓名">
+                                            <label for="name" class="text-[20px] py-3">電話:</label>
+                                            <input type="text" id="name" class="form-control" placeholder="請輸入電話">
+                                            <label for="name" class="text-[20px] py-3">信箱:</label>
+                                            <input type="text" id="name" class="form-control" placeholder="請輸入信箱">
+                                            <label for="textarea" class="text-[20px] py-3">請留言</label>
+                                            <textarea class="form-control" style="resize:0; width: 100%;" id="textarea"
+                                                placeholder="請輸入您的留言"></textarea>
+                                            <div class="flex justify-evenly">
+                                                <button type="reset" class="btn btn-blues mt-3">清空</button>
+                                                <button class="btn btn-primary mt-3">送出</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </form>

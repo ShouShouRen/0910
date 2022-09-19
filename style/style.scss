@@ -28,7 +28,7 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 
 .bg-op {
-    background-color: rgba(11, 11, 11, 0.8);
+    background-color: rgba(110, 110, 110, 0.8);
 }
 
 .mask {
@@ -164,6 +164,7 @@ section {
     background-image: url('../images/dot.jpg');
     background-size: contain;
     background-position: center;
+    background-attachment: fixed;
 }
 
 #news {
@@ -205,4 +206,5 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 }

@@ -11632,6 +11632,11 @@ section {
 .navbar .nav-link:hover::after {
   width: 100%;
 }
+@media (max-width: 576px) {
+  .navbar .nav-link:hover::after {
+    width: 0;
+  }
+}
 
 .carousel-caption.a {
   inset: 0;

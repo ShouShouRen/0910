@@ -2,7 +2,7 @@ Vue.createApp({
     data() {
         return {
             products: [],
-            carts: []
+            carts: [],
         }
     },
     methods: {
@@ -20,7 +20,7 @@ Vue.createApp({
             if (confirm('確認移除？')) {
                 this.carts.splice(idx, 1);
             }
-        }
+        },
     },
     computed: {
         total() {

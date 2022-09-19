@@ -71,6 +71,10 @@ section {
     height: 100vh;
 }
 
+.rounded-50{
+    border-radius: 50%;
+}
+
 @media (max-width: 1400px) {
 
     section,
@@ -186,6 +190,15 @@ section {
 }
 #contact{
     background-image: url('../images/contact.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cl-bg{
+    background: #b7e8fc!important;
+}
+#sweet{
+    background-image: url('../images/dot.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

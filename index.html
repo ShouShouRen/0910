@@ -33,7 +33,10 @@
                             <a class="nav-link" href="#news">最新消息</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#shop">有點甜</a>
+                            <a class="nav-link" href="#shop">立即訂購</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sweet">有點甜</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">聯絡我們</a>
@@ -156,7 +159,7 @@
         </section>
         <section id="shop" class="bg-gray h-100 pb-[70px]">
             <div class="container">
-                <h2 class="text-[40px] fw-bold text-center p-2">有點甜</h2>
+                <h2 class="text-[40px] fw-bold text-center p-2">立即訂購</h2>
                 <div class="row pt-3">
                     <div class="col-lg-4 p-3" v-for="product,idx in products">
                         <div class="mycard relative overflow-hidden">
@@ -179,10 +182,52 @@
                 </div>
             </div>
         </section>
+        <section id="sweet">
+            <h2 class="text-[40px] fw-bold text-center p-2">有點甜</h2>
+            <div class="container mx-auto items-center lg:flex block py-5">
+                <div class="lg:w-1/2">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                            aria-labelledby="home-tab" tabindex="0">
+                            <img src="./images/sweet-a.jpg"
+                                class="text-end w-[600px] h-[600px] object-cover img-fluid rounded-50" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                            tabindex="0">
+                            <img src="./images/sweet-b.jpg"
+                                class="text-end w-[600px] h-[600px] object-cover img-fluid rounded-50" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0"> <img src="./images/sweet-c.jpg"
+                                class="text-end w-[600px] h-[600px] object-cover img-fluid rounded-50" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 lg:block flex justify-between" id="myTab" role="tablist">
+                    <div class="col-12">
+                        <div class="my-5 p-4 bg-rose-200 relative lg:left-[-100px] rounded  cursor-pointer cl-bg"
+                            id="clickchange" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                            <h2 class="text-[26px] text-2d2d2d text-center">用料實在又安心，絕不添加任何防腐劑。</h2>
+                        </div>
+                        <div class="my-5 p-4 bg-rose-200 relative rounded  cursor-pointer" id="clickchange"
+                            id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+                            role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                            <h2 class="text-[26px] text-2d2d2d text-center">用料實在又安心，絕不添加任何防腐劑。</h2>
+                        </div>
+                        <div class="my-5 p-4 bg-rose-200 relative lg:left-[-100px] rounded  cursor-pointer"
+                            id="clickchange" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                            type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+                            <h2 class="text-[26px] text-2d2d2d text-center">用料實在又安心，絕不添加任何防腐劑。</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="contact" class="h-[80vh]">
             <h2 class="text-[40px] fw-bold text-center p-2">聯絡我們</h2>
             <div class="container">
-                
+
             </div>
         </section>
         <!-- modal -->

@@ -71,7 +71,7 @@ section {
     height: 100vh;
 }
 
-.rounded-50{
+.rounded-50 {
     border-radius: 50%;
 }
 
@@ -88,10 +88,12 @@ section {
     background-image: url('../images/navbar.png');
     background-repeat: no-repeat;
     background-size: cover;
+
     @media (max-width: 992px) {
         background-image: none;
         background-color: #2d2d2d;
     }
+
     .nav-item {
         font-size: 18px;
         padding-left: 2.5em;
@@ -125,6 +127,7 @@ section {
 
         &:hover::after {
             width: 100%;
+
             @media (max-width: 576px) {
                 width: 0;
             }
@@ -140,6 +143,16 @@ section {
     border: 8px solid #fff;
     width: 40%;
     height: 40%;
+    padding-bottom: 8px;
+
+    h3 {
+        font-size: 4em;
+    }
+
+    p {
+        font-size: 1.8em;
+        line-height: calc(1.8em * 1.8);
+    }
 }
 
 .carousel-caption.b {
@@ -149,15 +162,32 @@ section {
     width: 40%;
     height: 100%;
     text-align: left;
+
+    h3 {
+        font-size: 4em;
+    }
+
+    p {
+        font-size: 1.8em;
+        line-height: calc(1.8em * 1.1);
+    }
 }
 
 .carousel-caption.c {
     inset: 0;
-    top: 20%;
+    top: 40%;
     left: 50%;
     width: 45%;
     height: 100%;
     text-align: left;
+
+    h3 {
+        font-size: 4em;
+    }
+
+    p {
+        font-size: 1.8em;
+    }
 }
 
 #about {
@@ -172,14 +202,17 @@ section {
     background-size: cover;
     background-position: center;
 }
-#shop{
-    .mycard{
+
+#shop {
+    .mycard {
         background-color: #fff;
     }
-    .myshadow{
+
+    .myshadow {
         box-shadow: 10px 10px #ff7dd880;
     }
-    .ribbon{
+
+    .ribbon {
         width: 75%;
         background-color: #ff60af8e;
         z-index: 1;
@@ -189,19 +222,22 @@ section {
         text-align: center;
         color: #fff;
         padding: 5px;
-        
+
     }
 }
-#contact{
+
+#contact {
     background-image: url('../images/contact.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.cl-bg{
-    background: #b7e8fc!important;
+
+.cl-bg {
+    background: #b7e8fc !important;
 }
-#sweet{
+
+#sweet {
     background-image: url('../images/dot.jpg');
     background-size: cover;
     background-repeat: no-repeat;

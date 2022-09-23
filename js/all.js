@@ -9,7 +9,7 @@ $(document).ready(function () {
 	$('#sub').click(function () {
 		location.reload();
 	})
-	$('#clickchange,#clickchange，#clickchange').click(function () {
+	$('#clickchange,#clickchange，#clickchange').click(function () {desertdi
 		$('#clickchange,#clickchange,#clickchange').removeClass("cl-bg");
 		$(this).addClass("cl-bg");
 	})

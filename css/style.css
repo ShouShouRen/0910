@@ -11643,17 +11643,16 @@ section {
   top: 20%;
   left: 50%;
   transform: translate(-50%);
-  border: 8px solid #fff;
   width: 40%;
-  height: 40%;
+  height: 42%;
   padding-bottom: 8px;
+  text-shadow: 5px 5px 15px pink;
 }
 .carousel-caption.a h3, .carousel-caption.a .h3 {
   font-size: 4em;
 }
 .carousel-caption.a p {
-  font-size: 1.8em;
-  line-height: 3.24em;
+  font-size: 1.9em;
 }
 
 .carousel-caption.b {
@@ -11677,14 +11676,17 @@ section {
   top: 40%;
   left: 50%;
   width: 45%;
-  height: 100%;
+  height: 40%;
   text-align: left;
+  text-shadow: 3px 10px 15px #000;
 }
 .carousel-caption.c h3, .carousel-caption.c .h3 {
   font-size: 4em;
+  color: #fff;
 }
 .carousel-caption.c p {
   font-size: 1.8em;
+  color: #fff;
 }
 
 #about {

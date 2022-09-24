@@ -11672,17 +11672,40 @@ section {
 .carousel-caption.b {
   inset: 0;
   top: 20%;
-  left: 10%;
-  width: 40%;
+  left: 5%;
+  width: 30%;
   height: 100%;
   text-align: left;
+  text-shadow: 5px 5px 15px #2d2d2d;
+}
+@media (max-width: 992px) {
+  .carousel-caption.b {
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%);
+  }
 }
 .carousel-caption.b h3, .carousel-caption.b .h3 {
-  font-size: 4em;
+  font-size: 6em;
+  color: #2d2d2d;
+  text-shadow: 5px 5px 15px #2d2d2d;
+  width: 100vw;
+}
+@media (max-width: 992px) {
+  .carousel-caption.b h3, .carousel-caption.b .h3 {
+    font-size: 3em;
+  }
 }
 .carousel-caption.b p {
-  font-size: 1.8em;
-  line-height: 1.98em;
+  color: #fff;
+  font-size: 3em;
+  line-height: 2;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .carousel-caption.b p {
+    font-size: 1.5em;
+  }
 }
 
 .carousel-caption.c {
@@ -11692,7 +11715,7 @@ section {
   width: 45%;
   height: 40%;
   text-align: left;
-  text-shadow: 3px 10px 15px #000;
+  text-shadow: 5px 5px 15px pink;
 }
 .carousel-caption.c h3, .carousel-caption.c .h3 {
   font-size: 4em;

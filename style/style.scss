@@ -145,15 +145,16 @@ section {
     padding-bottom: 8px;
     text-shadow: 5px 5px 15px pink;
     text-align: left;
+
     h3 {
         font-size: 8em;
         color: #fff;
-        
+
         @media (max-width: 992px) {
             font-size: 4em;
         }
     }
-    
+
     p {
         color: #fff;
         font-size: 3.5em;
@@ -169,19 +170,40 @@ section {
 .carousel-caption.b {
     inset: 0;
     top: 20%;
-    left: 10%;
-    width: 40%;
+    left: 5%;
+    width: 30%;
     height: 100%;
     text-align: left;
+    text-shadow: 5px 5px 15px #2d2d2d;
 
+    @media (max-width: 992px) {
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%);
+    }
 
     h3 {
-        font-size: 4em;
+        font-size: 6em;
+        color: #2d2d2d;
+        text-shadow: 5px 5px 15px #2d2d2d;
+        width: 100vw;
+
+
+        @media (max-width: 992px) {
+            font-size: 3em;
+        }
     }
 
     p {
-        font-size: 1.8em;
-        line-height: calc(1.8em * 1.1);
+        color: #fff;
+        font-size: 3em;
+        line-height: 2;
+        width: 100%;
+
+        @media (max-width:992px) {
+            font-size: 1.5em;
+        }
+
     }
 }
 
@@ -192,7 +214,8 @@ section {
     width: 45%;
     height: 40%;
     text-align: left;
-    text-shadow: 3px 10px 15px #000;
+    text-shadow: 5px 5px 15px pink;
+
 
     h3 {
         font-size: 4em;

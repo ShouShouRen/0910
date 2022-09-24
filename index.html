@@ -241,7 +241,8 @@
                                                 placeholder="請輸入您的留言"></textarea>
                                             <div class="flex justify-evenly">
                                                 <button type="reset" class="btn btn-blues mt-3">清空</button>
-                                                <button class="btn btn-primary mt-3">送出</button>
+                                                <button class="btn btn-primary mt-3" data-bs-toggle="modal"
+                                                    data-bs-target="#submit">送出</button>
                                             </div>
                                         </div>
                                     </div>
@@ -259,7 +260,7 @@
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title h2" id="offcanvasRightLabel">購物車</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fa fa-close" aria-hidden="true"></i>
                 </button>
             </div>
             <div v-show="carts.length <= 0">
@@ -294,6 +295,25 @@
                         <button class="btn btn-primary" id="sub">送出</button>
                     </div>
                 </form>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="submit" tabindex="-1" aria-labelledby="submitLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="submitLabel">已送出</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        已送出感謝您的意見與回饋
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-blues" data-bs-dismiss="modal">關閉</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

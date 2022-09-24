@@ -11680,9 +11680,9 @@ section {
 }
 @media (max-width: 992px) {
   .carousel-caption.b {
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translateY(-100px);
   }
 }
 .carousel-caption.b h3, .carousel-caption.b .h3 {
@@ -11715,7 +11715,7 @@ section {
   width: 45%;
   height: 40%;
   text-align: left;
-  text-shadow: 5px 5px 15px pink;
+  text-shadow: 5px 5px 15px #2d2d2d;
 }
 .carousel-caption.c h3, .carousel-caption.c .h3 {
   font-size: 4em;

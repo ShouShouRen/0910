@@ -11640,19 +11640,33 @@ section {
 
 .carousel-caption.a {
   inset: 0;
-  top: 10%;
-  left: 50%;
+  top: 18%;
+  left: 35%;
   transform: translate(-50%);
-  width: 40%;
+  width: 50%;
   height: 42%;
   padding-bottom: 8px;
   text-shadow: 5px 5px 15px pink;
+  text-align: left;
 }
 .carousel-caption.a h3, .carousel-caption.a .h3 {
-  font-size: 4em;
+  font-size: 8em;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .carousel-caption.a h3, .carousel-caption.a .h3 {
+    font-size: 4em;
+  }
 }
 .carousel-caption.a p {
-  font-size: 1.9em;
+  color: #fff;
+  font-size: 3.5em;
+  line-height: 2;
+}
+@media (max-width: 992px) {
+  .carousel-caption.a p {
+    font-size: 1.5em;
+  }
 }
 
 .carousel-caption.b {

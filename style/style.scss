@@ -1,4 +1,4 @@
-$primary: #ffb1e8;
+$primary: rgb(254 205 211);;
 $secondary: #fafafa;
 @import './functions';
 @import './variables';
@@ -16,7 +16,9 @@ $custom-theme-colors: (
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
-
+::placeholder{
+    color: #ccc !important;
+}
 
 
 @import './bootstrap.scss';
@@ -254,13 +256,13 @@ section {
 
     .ribbon {
         width: 75%;
-        background-color: #ff60af8e;
+        background-color: rgb(254 205 211);;
         z-index: 1;
         transform: rotate(35deg);
         right: -25%;
         top: 5%;
         text-align: center;
-        color: #fff;
+        color: #f0000090;
         padding: 5px;
 
     }
